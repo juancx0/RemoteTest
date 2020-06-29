@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>This is my first JavaScript test</h1>
+    <p>This is a paragraph</p>
+    
+    <p id="add"></p>
+    <p id="show"></p>  <!-- id attribute defines the HTML element -->
+
+    <script>
+        document.getElementById("add").innerHTML = "This is a JS Output"; //case sensitive
+    </script>
+    <!--<script>
+        <button type="button" onclick="document.write (3+6)">TRY IT</button>
+         //Using document.write() after an HTML document is loaded, will delete all existing HTML
+        // The document.write() method should only be used for testing.
+    </script>-->
+    <script>
+    // window.alert (document.getElementById("show").innerHTML ="Another Output"); Output using window alert
+    
+     
+    console.log(6 * 9);
+    
+    </script>
+    <button onclick="window.print()">Printer</button> <!--this element must be outside of the script tags-->
+    <!-- JS Statements -->
+
+    <p id = "exp"></p> 
+    <p id = "rem"></p>
+    
+    <script>
+
+        /*var y, z;
+        y = 2;
+        y +=5;
+        z = y**2;
+        document.getElementById("exp").innerHTML =
+        "result is: " + z;
+        window.alert(typeof z);
+        */
+        var r;
+        var myself = {
+            name:"Juan",
+            surname:"Guzman",
+            age:40,
+            eyecolor:"green",
+            fullname: function(){ return this.name + " " + this.surname;} //this is a method
+        };
+        document.getElementById("exp").innerHTML = myself.fullname(); // find how to print out data in the object myself
+            
+        function imc(weight, height){
+            r = weight / (height * height);
+            return r;
+                    }
+        document.getElementById("rem").innerHTML= "Your IMC is: " +
+            imc(86, 1.71);
+
+            // JS EVENTS
+        function contextura(h,pm){document.getElementById("fun").innerHTML = "Contextura es: " + (h / pm);}
+
+
+        
+        var ages = [32, 45, 44, 90, 0, 2];
+        var test = names.forEach(functionexe); // names.map() names.filter() names.reduce() names.some() names.every()
+                        // names.indexOf() names.lastIndexOf()
+    
+        var f =  new Date(); // Methods f.toString() f.toUTCString()
+        // math functions: Math.PI; Math.round() ; Math.pow(x, y); Math.sqrt(x); Math.abs(x); Math.floor(Math.random() * 10);
+    
+    // var toVote = (age < 18) ? "Too young":"Old enough"; returns true or false base on condition
+
+    //if condicion
+    //else if condicon 2 truee
+    //else if condicion 3 truee
+    //else all condiciones false 
+
+    </script>
+
+<h2>These are events</h2>
+<button onclick = "document.getElementById('demo').innerHTML = Date()">No change</button><!--Caution: single quotes must be used on "demo id"-->
+<p id = "demo"></p><!--This element is changed by JS-->
+
+<button onclick = "this.innerHTML = Date()">Time Button</button><!--Here the code changes the content of its own element-->
+
+<button onclick = "contextura(171, 18)">Contextura</button>
+<p id = "fun"></p>
+<p id = "demo1"></p>
+                                           
+<script>
+
+ // JASON FORMAT
+
+/*
+var jasonpc = '{"computadores":[' +
+'{"procesador":"pentium", "marca":"HP"},' +
+'{"procesador":"amd",     "marca":"lenovo"},' +
+'{"procesador":"intel",   "marca":"samsung"}]}';
+
+var textJSON = JSON.parse(jasonpc);
+
+document.getElementById("test").innerHTML =
+textJSON.computadores[0].procesador + " " + textJSON.computadores[0].marca;
+
+*/
+
+</script>
+
+</body>
+</html>

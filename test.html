@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+
+<body>
+<h1><b onclick = "this.innerHTML = 'YOU HAVE CLICKED ME!'">HAZ CLICK</b></h1>
+<h2 onclick = "this.innerHTML = 'www.facebook.com/'">click here</h2>
+
+<p id = "test">paragraph</p>
+
+<p onclick = "textC(this)">click on this text</p> <!--keyword "this" must be used otherwise it won't work-->
+<button onclick = "fechaHoy()">Time is</button>
+
+<br><button id = "ev">Time Again</button></br>
+<p id = "foo">the time</p>
+
+<script>
+function textC(w){
+   w.innerHTML = 'Hey!';// w is a parameter.
+}
+
+function fechaHoy(){
+
+    if (navigator.cookieEnabled == true){
+        document.getElementById("test").innerHTML = Date() + "Cookies Enabled";
+    }
+    else {
+        document.getElementById("test").innerHTML = "Enable Cookies";
+    }
+}
+
+
+
+/*document.getElementById("test").innerHTML = "<h2>Hello Element</h2>";
+document.write("Hello Documente Object");
+document.getElementsByTagName("p").innerHTML = "Hello";
+document.querySelectorAll*/
+
+function fx() {
+    
+    var x = document.getElementById("ide");
+    x.style.background = "yellow";
+    x.value = x.value.toUpperCase();
+}
+
+function mDown(d) {
+    d.innerHTML = "Release Me";
+}
+
+function mUp(u) {
+    u.innerHTML = "Thank you";
+}
+
+document.getElementById("ev").addEventListener("click", theTime); // addEventListener. 
+//HTML elements must be above script tag
+
+function theTime () {
+    document.getElementById("foo").innerHTML = Date();
+}
+
+
+
+</script>
+
+<br>Enter Name <input type="text" id="ide" onchange="fx(this)"></br>
+
+<button onmousedown="mDown(this)" onmouseup="mUp(this)">click</button>
+<!--<button onmouseover="mDown(this)" onmouseout="mUp(this)">touch me</button> -->
+
+
+
+
+
+</body>
+</html>

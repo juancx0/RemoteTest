@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+
+
+<p id = "demo"></p>
+<p id = "demo1"></p>
+<p id = "nam"></p>
+<p id = "java"></p>
+<script>
+    
+    var text = "";
+    var names = ["juan", "carlos", "eli", "adri", "ana"];
+    var i;
+    var n;
+   // text += names[0]; // = undefined + "juan" ; variables must be type defined
+    /*for(i = 0; i < names.length; i++){
+        text += names[i] + "<br>";
+    }*/
+    for(n of names){                                // FOR OF
+        document.write("name is : " + n + "<br>");
+    }
+    
+// document.getElementById("demo").innerHTML = text;
+
+
+var j;
+var pow =""; // pow must be typed
+
+for(j = 0; j < 5; j++){
+    pow += 2**j + "<br>";
+}
+document.getElementById("demo1").innerHTML = pow ;
+
+var a = 0; // WHILE
+var t = "";
+while(a < 10){
+    t += "number is: " + a + "<br>";
+    a++;
+    
+}
+document.getElementById("nam").innerHTML = t;
+
+var h = "JavaScript"; // DO WHILE
+var k = 0;
+var l = "";
+do {
+    l += h[k] + "<br>";
+    k++;
+}
+
+while(k < h.length);
+
+document.getElementById("java").innerHTML = l;
+
+
+
+//hello = () => "Hola Arrow Function";
+//<button onclick = "this." >ArrowF</button>
+
+//var hello;
+                                                    // CLASSES
+class bike {                            // a class (pARENT)
+    constructor(brand) {
+        this.bikename = brand;
+    }
+    show(){
+        return "I have a " + this.bikename;
+    }
+}
+
+class Model extends bike {  //INHERITANCE Use the "extends" keyword to inherit all methods from another class.
+    constructor(brand, mod) {
+        super(brand);   // Use the "super" method to call the parent's constructor function.
+        this.model = mod;
+    }
+    present(){
+        return this.show() +  "it is a " + this.model;
+    }
+}
+
+myBike = new Model("Yamaha", "R15");
+document.getElementById("demo").innerHTML = myBike.present();
+
+
+/*var jasonpc = '{ "computadores": [' +                         Create Object from JSON String
+'{"procesador":"pentium", "marca":"HP"},' +
+'{"procesador":"amd",     "marca":"lenovo"},' +
+'{"procesador":"intel",   "marca":"samsung"}]}';
+
+textJSON = JSON.parse(jasonpc);*/
+
+
+</script>
+
+
+
+</body>
+
+</html>
