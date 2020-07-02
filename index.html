@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+ <!--USING SWITCH STATEMENT-->
+
+ <h1>DAILY HOME WORK OUT</h1>
+ <h2>WORK OUT FOR TODAY IS: </h2>
+
+
+<button onclick = "this.innerHTML = Date()">Time Button</button>
+<p id = "wo"></p>
+
+<script>
+var day;
+
+switch (new Date().getDay()) {
+    case 0:
+        day = "Sunday: REST";
+        break;
+    case 1:
+        day = "Monday: Shoulders, TRICEPS, Vegeta";
+        break;
+    case 2:
+        day = "Tuesday: CHEST, BICEPS, CARDIO";
+        break;
+    case 3:
+        day = "Wednesday:BACK, TRICEPS, CARDIO";
+        break;
+    case 4:
+        day = "Thursday: REST";
+        break;
+    case 5: 
+        day = "Friday: CHEST, BICEPS, CARDIO";
+        break;
+    case 6:
+        day = "Saturday: LEGS, BACK, VEGETA";
+        break;
+    default:
+        day = "Not a day";
+        
+
+}
+document.getElementById("wo").innerHTML ="WORK OUT FOR " + day;
+</script>
+
+
+</body>
+</html>
